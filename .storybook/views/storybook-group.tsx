@@ -1,15 +1,15 @@
-import * as React from "react"
-import { CSSProperties } from "react"
-import { StorybookLabel } from "./storybook-label"
+import * as React from "react";
+import { CSSProperties } from "react";
+import { StorybookLabel } from "./storybook-label";
 
 export interface StorybookGroupProps {
-  title?: string
-  children?: React.ReactNode
+  title?: string;
+  children?: React.ReactNode;
 }
 
 const style: CSSProperties = {
   paddingBottom: 20,
-}
+};
 
 export function StorybookGroup(props: StorybookGroupProps) {
   return (
@@ -17,5 +17,5 @@ export function StorybookGroup(props: StorybookGroupProps) {
       <StorybookLabel title={props.title} />
       {props.children}
     </div>
-  )
+  );
 }
