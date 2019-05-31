@@ -1,5 +1,5 @@
-import { join } from "path"
-import { format } from "url"
+import { join } from "path";
+import { format } from "url";
 
 export function loadURL(
   window: Electron.BrowserWindow,
@@ -7,7 +7,7 @@ export function loadURL(
   showStorybook: boolean = false,
 ) {
   if (showStorybook) {
-    window.loadURL("http://localhost:6006")
+    window.loadURL("http://localhost:6006");
   } else {
     window.loadURL(
       format({
@@ -15,6 +15,6 @@ export function loadURL(
         protocol: "file:",
         slashes: true,
       }),
-    )
+    );
   }
 }

@@ -12,7 +12,11 @@
     "noImplicitAny": true,
     "allowJs": false,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "views/*": ["./src/views/*"]
+    }
   },
   "include": ["src", "typings", "fuse.ts", "./storybook/views"],
   "exclude": ["node_modules"]
