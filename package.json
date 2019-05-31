@@ -59,8 +59,6 @@
     "lint": "tslint --project .",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
-    "precommit": "lint-staged",
-    "prepush": "npm-run-all typecheck lint",
     "sanity": "npm-run-all clean typecheck lint test clean compile clean",
     "start": "ts-node fuse",
     "storybook": "start-storybook -p 6006",
@@ -174,5 +172,11 @@
       "tslint --fix",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm-run-all typecheck lint"
+    }
   }
 }
