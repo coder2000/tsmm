@@ -3,6 +3,6 @@
  */
 
 // @ts-ignore
-global.window = global
-window.addEventListener = () => {}
-window.requestAnimationFrame = () => 1
+global.window = global;
+window.addEventListener = () => {};
+window.requestAnimationFrame = () => 1;

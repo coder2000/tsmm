@@ -1,4 +1,4 @@
-import { keyframes } from "glamor"
+import { keyframes } from "glamor";
 
 /**
  * Keyframe animations.
@@ -11,4 +11,4 @@ export const animations = {
     "0%": { transform: "rotate(0deg)" },
     "100%": { transform: "rotate(360deg)" },
   }),
-}
+};

@@ -1,1 +1,1 @@
-declare module "require-context.macro"
+declare module "require-context.macro";

@@ -1,18 +1,18 @@
 // this example is here only to show how some testing could work.
-import { Repo } from "../repo"
+import { Repo } from "../repo";
 
 interface DatabaseOptions {
-  readonly directory: string
+  readonly directory: string;
 }
 
 /**
  * Wraps data access.
  */
 export class Database {
-  readonly options: DatabaseOptions
+  readonly options: DatabaseOptions;
 
   constructor(options: DatabaseOptions) {
-    this.options = options
+    this.options = options;
   }
 
   /**
@@ -25,10 +25,10 @@ export class Database {
           name: fullName.split("/")[1],
           fullName,
           private: false,
-        }
-        resolve(repo)
+        };
+        resolve(repo);
       }, 10),
-    )
+    );
   }
 
   /**
@@ -37,6 +37,6 @@ export class Database {
    * @param repo The thing to save.
    */
   save(repo: Repo): Promise<boolean> {
-    return new Promise(resolve => setTimeout(() => resolve(repo.fullName !== "crap"), 10))
+    return new Promise(resolve => setTimeout(() => resolve(repo.fullName !== "crap"), 10));
   }
 }

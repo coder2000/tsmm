@@ -1,11 +1,11 @@
-import * as React from "react"
-import { CSSProperties } from "react"
-import { cssProps, styles } from "../../theme"
-import { compose, css } from "glamor"
+import * as React from "react";
+import { CSSProperties } from "react";
+import { cssProps, styles } from "../../theme";
+import { compose, css } from "glamor";
 
 export interface CenteredContentProps {
-  children: React.ReactNode
-  style?: CSSProperties | CSSProperties[] | false | null
+  children: React.ReactNode;
+  style?: CSSProperties | CSSProperties[] | false | null;
 }
 
 const BASE = compose(
@@ -16,8 +16,8 @@ const BASE = compose(
     justifyContent: "center",
     alignItems: "center",
   }),
-)
+);
 
 export function CenteredContent(props: CenteredContentProps) {
-  return <div {...css(BASE, props.style)}>{props.children}</div>
+  return <div {...css(BASE, props.style)}>{props.children}</div>;
 }

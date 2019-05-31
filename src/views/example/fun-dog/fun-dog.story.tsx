@@ -1,8 +1,8 @@
-import * as React from "react"
-import { storiesOf } from "@storybook/react"
-import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views"
+import * as React from "react";
+import { storiesOf } from "@storybook/react";
+import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views";
 
-import { FunDog } from "./fun-dog"
+import { FunDog } from "./fun-dog";
 
 storiesOf("Fun Dog", module).add("default", () => (
   <Story>
@@ -12,4 +12,4 @@ storiesOf("Fun Dog", module).add("default", () => (
       </div>
     </Group>
   </Story>
-))
+));

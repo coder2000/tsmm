@@ -1,11 +1,11 @@
 declare module "electron-window-state-manager" {
-  import { BrowserWindow } from "electron"
+  import { BrowserWindow } from "electron";
 
   interface ElectronStateManagerOptions {
     /** The default width for this window. */
-    defaultWidth?: number
+    defaultWidth?: number;
     /** The default height for this window. */
-    defaultHeight?: number
+    defaultHeight?: number;
   }
 
   /**
@@ -18,20 +18,20 @@ declare module "electron-window-state-manager" {
      * @param name The name of the window.
      * @param options Some default options.
      */
-    constructor(name: string, options?: ElectronStateManagerOptions)
+    constructor(name: string, options?: ElectronStateManagerOptions);
     /** Save this window's dimensions */
-    saveState(browserWindow: BrowserWindow): void
+    saveState(browserWindow: BrowserWindow): void;
     /** The window width. */
-    width: number
+    width: number;
     /** The window height. */
-    height: number
+    height: number;
     /** the window left position. */
-    x: number
+    x: number;
     /** The window right position. */
-    y: number
+    y: number;
     /** Is this maximized? */
-    maximized: boolean
+    maximized: boolean;
   }
 
-  export = ElectronStateManager
+  export = ElectronStateManager;
 }

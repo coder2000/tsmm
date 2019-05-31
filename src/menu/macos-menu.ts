@@ -1,12 +1,12 @@
-import { app } from "electron"
-import { createSharedMenuItems } from "./shared-menu"
-import * as isDev from "electron-is-dev"
+import { app } from "electron";
+import { createSharedMenuItems } from "./shared-menu";
+import * as isDev from "electron-is-dev";
 
 export function createMacMenu(
   window: Electron.BrowserWindow,
 ): Electron.MenuItemConstructorOptions[] {
-  const shared = createSharedMenuItems(window)
-  const name: string = app.getName()
+  const shared = createSharedMenuItems(window);
+  const name: string = app.getName();
 
   const appMenu: Electron.MenuItemConstructorOptions = {
     label: name,
@@ -19,7 +19,7 @@ export function createMacMenu(
       { type: "separator" },
       { ...shared.quit, accelerator: "Command+Q" },
     ],
-  }
+  };
 
   const viewMenu: Electron.MenuItemConstructorOptions = {
     label: "View",
@@ -30,12 +30,12 @@ export function createMacMenu(
           { ...shared.toggleDevTools, accelerator: "Alt+Command+I" },
         ]
       : [{ ...shared.fullScreen, accelerator: "Ctrl+Command+F" }],
-  }
+  };
 
   const helpMenu: Electron.MenuItemConstructorOptions = {
     label: "Help",
     submenu: [process.env.HOMEPAGE && shared.visit].filter(Boolean),
-  }
+  };
 
-  return [appMenu, viewMenu, helpMenu]
+  return [appMenu, viewMenu, helpMenu];
 }

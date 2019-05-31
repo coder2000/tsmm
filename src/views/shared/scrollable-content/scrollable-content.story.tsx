@@ -1,7 +1,7 @@
-import * as React from "react"
-import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views"
-import { storiesOf } from "@storybook/react"
-import { ScrollableContent } from "./index"
+import * as React from "react";
+import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views";
+import { storiesOf } from "@storybook/react";
+import { ScrollableContent } from "./index";
 
 storiesOf("ScrollableContent", module).add("default", () => (
   <Story>
@@ -22,4 +22,4 @@ storiesOf("ScrollableContent", module).add("default", () => (
       </ScrollableContent>
     </Group>
   </Story>
-))
+));

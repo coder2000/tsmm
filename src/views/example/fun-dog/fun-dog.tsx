@@ -1,9 +1,9 @@
-import * as React from "react"
-import { CSSProperties } from "react"
-import { colors } from "../../theme"
-import { SpinAnimation } from "../../shared/spin-animation"
-import { css } from "glamor"
-const dogImage = require("./fun-dog.jpg")
+import * as React from "react";
+import { CSSProperties } from "react";
+import { colors } from "../../theme";
+import { SpinAnimation } from "../../shared/spin-animation";
+import { css } from "glamor";
+const dogImage = require("./fun-dog.jpg");
 
 const IMAGE = css({
   width: 400,
@@ -15,17 +15,17 @@ const IMAGE = css({
   "&:hover": {
     borderColor: colors.sentiment.highlight,
   },
-})
+});
 
 export interface FunDogProps {
-  style?: CSSProperties | CSSProperties[] | null | false
+  style?: CSSProperties | CSSProperties[] | null | false;
 }
 
 export function FunDog(props: FunDogProps) {
-  const style = css(IMAGE, props.style)
+  const style = css(IMAGE, props.style);
   return (
     <SpinAnimation>
       <img draggable={false} src={dogImage} {...style} />
     </SpinAnimation>
-  )
+  );
 }

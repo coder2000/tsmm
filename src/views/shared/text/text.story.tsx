@@ -1,9 +1,9 @@
-import * as React from "react"
-import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views"
+import * as React from "react";
+import { StorybookStory as Story, StorybookGroup as Group } from "../../../../.storybook/views";
 
-import { storiesOf } from "@storybook/react"
+import { storiesOf } from "@storybook/react";
 
-import { Text } from "./index"
+import { Text } from "./index";
 
 storiesOf("Text", module)
   .add("text styles", () => (
@@ -46,7 +46,7 @@ storiesOf("Text", module)
           text for your mockup? How quaint. I bet you’re still using Bootstrap too…
         </Text>
       </Group>
-      <Group title="style={{ color: &quot;red&quot; }}">
+      <Group title='style={{ color: "red" }}'>
         <Text style={{ color: "red" }}>Hello World!</Text>
       </Group>
     </Story>
@@ -67,4 +67,4 @@ storiesOf("Text", module)
         </Text>
       </Group>
     </Story>
-  ))
+  ));

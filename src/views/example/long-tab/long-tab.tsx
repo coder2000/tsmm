@@ -1,25 +1,25 @@
-import * as React from "react"
-import { CSSProperties } from "react"
-import { spacing, cssProps } from "../../theme"
-import { Text } from "../../shared/text"
-import { ScrollableContent } from "../../shared/scrollable-content"
-import { css } from "glamor"
+import * as React from "react";
+import { CSSProperties } from "react";
+import { spacing, cssProps } from "../../theme";
+import { Text } from "../../shared/text";
+import { ScrollableContent } from "../../shared/scrollable-content";
+import { css } from "glamor";
 
 const PADDED = cssProps({
   paddingBottom: spacing.large,
-})
+});
 
 const ROOT = cssProps({
   padding: spacing.large,
-})
+});
 
 export interface LongTabProps {
-  style?: CSSProperties | CSSProperties[] | null | false
+  style?: CSSProperties | CSSProperties[] | null | false;
 }
 
 export class LongTab extends React.PureComponent<LongTabProps, {}> {
   render() {
-    const root = css(ROOT, this.props.style)
+    const root = css(ROOT, this.props.style);
 
     return (
       <ScrollableContent style={root}>
@@ -92,6 +92,6 @@ export class LongTab extends React.PureComponent<LongTabProps, {}> {
         <Text style={PADDED}>Oh. You need a little dummy text for your mockup? How quaint.</Text>
         <Text>I bet you’re still using Bootstrap too…</Text>
       </ScrollableContent>
-    )
+    );
   }
 }
