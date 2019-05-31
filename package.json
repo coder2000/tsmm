@@ -1,22 +1,22 @@
 {
-  "name": "typescript-with-electron-react-kit",
-  "productName": "Sweet Sweet App",
+  "name": "tsmm",
+  "productName": "Trucker Sim Mod Manager",
   "main": "out/main.js",
-  "version": "2.0.0",
-  "description": "An electron starter project.",
+  "version": "0.0.1",
+  "description": "Mod manager for ATS and ETS2",
   "license": "MIT",
   "private": true,
   "author": {
-    "email": "steve@kellock.ca",
-    "name": "Steve Kellock"
+    "email": "coder2000@gmail.com",
+    "name": "Dieter Lunn"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/skellock/typescript-with-electron-react-kit.git"
+    "url": "https://github.com/coder2000/tsmm.git"
   },
-  "homepage": "https://github.com/skellock/typescript-with-electron-react-kit",
+  "homepage": "https://github.com/coder2000/tsmm",
   "build": {
-    "appId": "com.example.typescript-with-electron-react-kit",
+    "appId": "ca.dieterlunn.tsmm",
     "files": [
       "!src",
       "!docs",
@@ -36,9 +36,9 @@
       "category": "public.app-category.developer-tools"
     },
     "publish": {
-      "owner": "skellock",
+      "owner": "coder2000",
       "provider": "github",
-      "repo": "typescript-with-electron-react-kit"
+      "repo": "tsmm"
     },
     "win": {
       "target": [
@@ -81,7 +81,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-pose": "^4.0.8",
-    "react-transition-group": "^4.0.1"
+    "react-transition-group": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -91,7 +91,7 @@
     "@storybook/react": "^5.0.11",
     "@types/jest": "^24.0.13",
     "@types/mousetrap": "^1.6.2",
-    "@types/node": "^12.0.3",
+    "@types/node": "^12.0.4",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-test-renderer": "^16.8.1",
@@ -99,7 +99,7 @@
     "@types/storybook__addon-storyshots": "^4.0.0",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.6",
-    "babel-plugin-macros": "^2.5.1",
+    "babel-plugin-macros": "^2.6.0",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.3",
     "electron": "^5.0.2",
@@ -115,9 +115,9 @@
     "react-test-renderer": "^16.8.6",
     "require-context.macro": "^1.0.4",
     "ts-jest": "^24.0.2",
-    "ts-loader": "^6.0.1",
+    "ts-loader": "^6.0.2",
     "ts-node": "^8.2.0",
-    "tslint": "^5.16.0",
+    "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.5.1",
     "webpack": "^4.32.2"
