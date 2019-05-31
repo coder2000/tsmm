@@ -1,22 +1,22 @@
 {
-  "name": "tsmm",
-  "productName": "Truck Simulator Mod Manager",
+  "name": "typescript-with-electron-react-kit",
+  "productName": "Sweet Sweet App",
   "main": "out/main.js",
-  "version": "0.0.1",
-  "description": "Mod manager for ATS and ETS2",
+  "version": "2.0.0",
+  "description": "An electron starter project.",
   "license": "MIT",
   "private": true,
   "author": {
-    "email": "dieter@dieterlunn.ca",
-    "name": "Dieter Lunn"
+    "email": "steve@kellock.ca",
+    "name": "Steve Kellock"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coder2000/tsmm.git"
+    "url": "https://github.com/skellock/typescript-with-electron-react-kit.git"
   },
-  "homepage": "https://github.com/coder2000/tsmm",
+  "homepage": "https://github.com/skellock/typescript-with-electron-react-kit",
   "build": {
-    "appId": "ca.dieterlunn.tsmm",
+    "appId": "com.example.typescript-with-electron-react-kit",
     "files": [
       "!src",
       "!docs",
@@ -36,9 +36,9 @@
       "category": "public.app-category.developer-tools"
     },
     "publish": {
-      "owner": "coder2000",
+      "owner": "skellock",
       "provider": "github",
-      "repo": "tsmm"
+      "repo": "typescript-with-electron-react-kit"
     },
     "win": {
       "target": [
@@ -69,34 +69,37 @@
   },
   "dependencies": {
     "electron-is-dev": "^1.1.0",
-    "electron-log": "^3.0.5",
+    "electron-log": "^3.0.6",
     "electron-store": "^3.2.0",
     "electron-updater": "^4.0.6",
     "electron-window-state-manager": "^0.3.2",
     "glamor": "^2.20.40",
     "mousetrap": "^1.6.3",
     "popmotion": "^8.6.10",
-    "popmotion-react": "^2.1.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-pose": "^4.0.8",
     "react-transition-group": "^4.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
     "@storybook/addon-storyshots": "^5.0.11",
     "@storybook/react": "^5.0.11",
-    "@types/electron-is-dev": "^1.1.1",
-    "@types/electron-store": "^3.2.0",
     "@types/jest": "^24.0.13",
     "@types/mousetrap": "^1.6.2",
-    "@types/react": "^16.8.18",
+    "@types/node": "^12.0.3",
+    "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-test-renderer": "^16.8.1",
     "@types/semver": "^6.0.0",
+    "@types/storybook__addon-storyshots": "^4.0.0",
     "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.5.1",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.3",
     "electron": "^5.0.2",
@@ -110,19 +113,21 @@
     "prettier": "^1.17.1",
     "react-powerplug": "^1.0.0",
     "react-test-renderer": "^16.8.6",
+    "require-context.macro": "^1.0.4",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.1",
     "ts-node": "^8.2.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "~3.4.5"
+    "typescript": "~3.5.1",
+    "webpack": "^4.32.2"
   },
   "jest": {
     "setupFiles": [
       "./test/setup.ts"
     ],
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "ts-jest"
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/mock-file.ts",
@@ -153,7 +158,15 @@
       }
     },
     "collectCoverage": false,
-    "mapCoverage": true
+    "globals": {
+      "ts-jest": {
+        "babelConfig": {
+          "plugins": [
+            "macros"
+          ]
+        }
+      }
+    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
